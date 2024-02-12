@@ -23,6 +23,6 @@ steps:
 - task: CopyPublishBuildArtifacts@1
   inputs:
     CopyRoot: '$(Agent.BuildDirectory)'
-    Contents: '**\*war'
-    ArtifactName: 'mavnartifact'
-    ArtifactType: 'FilePath'
+    Contents: '**\*'
+    ArtifactName: 'testfact'
+    ArtifactType: 'Container'
