@@ -25,3 +25,8 @@ steps:
     SourceFolder: '/usr/share/apache-maven-3.8.8'
     Contents: '**/*war'
     TargetFolder: '$(build.artifactstagingdirectory'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'mavanfact'
+    publishLocation: 'Container'
